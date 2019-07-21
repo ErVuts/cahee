@@ -16,3 +16,45 @@
 	}
 }
 
+@mixin posCenter {
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%)
+}
+
+@mixin ellipsis {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+@mixin backGround {
+	background-position:center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@mixin placeholder {
+  &::placeholder {@content} 
+}
+
+@mixin pl-fade-out($duration: 200ms) {
+  @include placeholder {
+    opacity: 1;
+    transition: opacity $duration;
+  }
+  &:focus {
+    @include placeholder {
+      opacity: 0;
+    }
+  } 
+}
+
+@mixin posAFill() {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
