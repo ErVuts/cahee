@@ -59,14 +59,12 @@
 	right: 0;
 }
 
-@mixin shadowpush($elementshadow:10px 10px 5px -10px rgba(0,0,0,0.75)) {
-	box-shadow:$elementshadow;
-	@include hover{
-		box-shadow:none;
-	}
-	
+@mixin shadowPush ($elementshadow:10px 10px 5px -10px rgba(0,0,0,0.75)) {
+  box-shadow:$elementshadow;
+  @include hover{
+    box-shadow:none;
+  }
 }
-
 @mixin fontPlacehold {
 	font-weight: 800;
 	&::placeholder{
