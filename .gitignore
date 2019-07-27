@@ -1,6 +1,5 @@
 node_modules
 
 *.psd
-*.png
 
 package-lock.json
